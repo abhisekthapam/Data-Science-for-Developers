@@ -7,7 +7,6 @@ broadbandSpeedPerformance = read_csv("C:/Users/DELL/OneDrive/Desktop/Data Scienc
 # Data Cleaning: Impute missing values with appropriate statistics and log-transform selected numeric variables
 # 1. Missing values are replaced with the median of the column. If a column has more than 90% missing values, replace with 0.
 # 2. Log transformation is applied to certain numeric columns to normalize the data distribution.
-
 broadbandSpeedPerformance = broadbandSpeedPerformance %>%
   mutate(across(where(is.numeric), 
                 ~ ifelse(is.na(.), 
